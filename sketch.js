@@ -84,13 +84,13 @@ function draw() {
     //move the ground
     ground.velocityX = -(6 + 3*count/100);
     //scoring
-    count = Math.round(getFrameRate()/4);
+    count = count+ Math.round(getFrameRate()/60);
      if (ground.x < 0){
       ground.x = ground.width/2;
     }
     
      //jump when the space key is pressed
-    if(keyDown("space") && trex.y >= 159){
+    if(keyDown("space") && trex.y >= 150){
       trex.velocityY = -12 ;
      
     }
